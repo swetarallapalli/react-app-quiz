@@ -1,38 +1,324 @@
-.App {
-  text-align: center;
+:root{
+  --primary-color:greenyellow;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.main-container{
+   background-image: url("https://ak.picdn.net/shutterstock/videos/2019793/thumb/6.jpg");
+   background-size: cover;
+   min-height:100vh;
+   width: 100%;
+   padding-bottom: 4em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Header */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
+  width:40%;
+  margin: 0 auto;
+  padding-top: 2em;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-evenly;
+}
+.header>.nav-link{
+  color: var(--primary-color);
+  text-decoration: none;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 2rem;
+  outline: none;
+}
+.header>.active-link{
+ color: white;
+ border-bottom: 2px solid var(--primary-color);
+}
+
+/* Home-Landing page */
+.home{
+ padding-top: 8em ;
+ display: flex;
+ flex-direction: column;
+ width:40%;
+ margin:auto
+}
+.home>h4{
+  color: var(--primary-color);
+  /* font-family: 'Open Sans Condensed', sans-serif; */
+  font-family: 'Roboto', sans-serif;
+ text-align: center;
+margin-bottom: 1em;
+font-size: 2rem;
+}
+.home>p{
+  color:  white;
+  font-family: 'Six Caps', sans-serif;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 500;
+  letter-spacing:3px;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+
+.home>a{
+  background-color: var(--primary-color);
+  color: #271f1f;
+  width:30%;
+height: 30px;
+margin:0 auto;
+border-radius: 5px;
+text-decoration: none;
+text-align: center;
+font-size: 1.5rem;
+padding:0.5em 0;
+font-weight: 700;
+font-family: 'Abril Fatface', cursive;
+
+}
+.home>a:hover{
+  color: white;
+    background-color: #86c232;
+}
+
+/* Quiz Page */
+
+.quiz-container{
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 5em;
+ 
+}
+.selection-filter{
+  margin-bottom: 1.5em;
+}
+
+.selection-filter>label{
+  color: white;
+ font-size: 2.5rem;
+ line-height: 1.5em;
+ letter-spacing: 2px;
+ font-family: 'Six Caps', sans-serif;
+}
+.selection-filter>input, .selection-filter>select{
+  font-size: 1rem;
+height:30px;
+width:100%;
+  outline:none
+}
+.quiz-container>button{
+  background-color: var(--primary-color);
+  color: #271f1f;
+  height: 50px;
+  width: 20%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding:0.25em ;
+  font-family: 'Abril Fatface', cursive;
+  margin-top: 2em ;
+  margin-left: 10em
+}
+
+
+.quiz-container>button:hover{
+  color: white;
+    background-color: #86c232;
+}
+
+.error{
+  font-size: 1.25rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+/* Single Question*/
+.question-container{
+color:white;
+  width: 70%;
+  margin: 0 auto;
+ 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.exit-btn{
+  text-align: right;
+  padding-top: 2.5em ;
+  
 }
+.exit-btn>a{
+background-color:var(--primary-color);
+color: #271f1f;
+height: 20px;
+border-radius: 5px;
+text-decoration: none;
+font-size: 1.25rem;
+padding:0.5em ;
+font-family: 'Abril Fatface', cursive;
+}
+
+.question{
+  font-size: 2.75rem;
+  line-height: 1.25;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-weight: 700;
+  margin-top: 2em;
+}
+.answers{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+  .answers>button{
+    width: 50%;
+    height: 60px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-top: 1em;
+    font-size: 1.25rem;
+  }
+
+  .answers>button:hover,.next-btn>button:hover,.exit-btn>a:hover{
+    color: white;
+    background-color: #86c232;
+  }
+
+  .correct-answers-count{
+    color:#86c232 ;
+    font-size: 1.5rem;
+    margin-top:3em
+  }
+  .next-btn{
+    text-align: right;
+    margin-top: -2.5em;
+    
+  }
+  .next-btn>button{
+    background-color:var(--primary-color);
+    color: #271f1f;
+    border: none;
+    outline: none;
+border-radius: 5px;
+text-decoration: none;
+font-size: 1.25rem;
+padding:0.5em ;
+font-family: 'Abril Fatface', cursive;
+  }
+
+  /* Loader gif*/
+  .loader{
+    display :flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10em;
+  }
+  .loader>img{
+height:50px;
+width:50px
+  }
+  .loader>h1{
+    color:white;
+    margin-top:2em
+  }
+
+/*Modal*/
+
+.result{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 15em;
+  font-family:'Open Sans Condensed', sans-serif;
+}
+.result h1{
+  color: var(--primary-color);
+  font-size: 5rem;
+  font-weight: 700;
+
+}
+.result h4{
+  color: white;
+  font-size: 3rem;
+  margin: 1em 0;
+}
+.result>div >a{
+  background-color: var(--primary-color);
+  color: #271f1f;
+height: 30px;
+border-radius: 5px;
+text-decoration: none;
+font-size: 1.5rem;
+padding:0.5em ;
+font-family: 'Abril Fatface', cursive;
+}
+.result>div>  a:hover{
+  color: white;
+    background-color: #86c232;
+}
+
+  /* Media Queries*/
+  @media (max-width:920px){
+    .header{
+      width:60%
+    }
+    .home>a{
+      padding:0.5em ;
+    }
+    .question{
+      margin-top: 1.25em;
+      font-size: 2.25rem;
+    }
+    .correct-answers-count{
+      margin-top: 4em;
+    }
+    .result>h1{
+      font-size: 4em;
+    }
+    .result>h4{
+      font-size: 2em;
+    }
+  }
+  
+  @media (max-width:720px){
+    .home{
+      padding-top: 5em;
+    }
+    .header{
+      width:60%
+    }
+    .home>h4{
+      font-size: 3rem;
+    }
+    .home>a{
+     padding-top: 0.75em;
+      font-size: 1rem;
+    }
+    .header>.nav-link{
+      font-size: 1.75rem;
+    }
+    .question{
+        font-size: 2rem;
+      }
+      .next-btn{
+        text-align: center;
+    margin-top: 2em;
+      }
+      .exit-btn>a,.next-btn>button{
+        font-size: 1rem;
+      }
+      .correct-answers-count{
+        font-size: 1.25rem;
+      text-align: center;
+      }
+      .result>h1{
+        font-size: 3em;
+      }
+      .result>h4{
+        font-size: 1.75em;
+      }
+      .result>div >a{
+        font-size: 1rem;
+      }
+  }
